@@ -53,6 +53,9 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.nav_login:hover{
+    cursor: pointer;
+}
 .nav_frame>iframe{
     width:100%;
     height:110px;

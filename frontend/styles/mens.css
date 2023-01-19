@@ -1,0 +1,52 @@
+.mens_cont{
+    border:1px solid black;
+    width:85%;
+    margin:20px auto;
+    display:flex;
+    justify-content: space-between;
+}
+.mens-left{
+    border:1px solid red;
+    width:20%;
+    display: flex;
+    flex-direction: column;
+}
+.mens-right{
+    border:1px solid blue;
+    width:75%;
+}
+.m-sort-div{
+    border:1px solid RED;
+    display: flex;
+    justify-content: right;
+}
+.m-item-cont{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.single-shoe{
+    border:1px solid black;
+}
+.single-shoe img{
+    width:100%;
+}
+.shoe-full{
+    display: flex;
+    justify-content: space-between;
+}
+.shoe-left{
+    width:49%;
+    border:1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 10px;
+}
+.shoe-right{
+    width:49%;
+    border:1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 10px;
+}

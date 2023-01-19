@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG IN</title>
+    <link rel="stylesheet" href="../styles/land.css"></link>
+    <link rel="stylesheet" href="../styles/login.css"></link>
+    <link rel="stylesheet" href="../css/all.css"></link>
+</head>
+<body>
+    <div class="nav_frame">
+        <iframe src="./nav.html" frameborder="0"></iframe>
+    </div>
+    <div class="login_head">
+        <h1>Log In</h1>
+    </div>
+    <div class="login_opt">
+        <div class="default-a click_effect">Login as User</div>
+        <div class="default-b">Login as Admin</div>
+    </div>
+    <div class="login_user">
+        <div class="user_login_form">
+            <form>
+                <label>Email Address</label>
+                <input required type="email" name="email" />
+                <label>Password</label>
+                <input required type="text" name="password" />
+                <input type="submit" value="PROCEED TO LOG IN"/>
+            </form>
+        </div>
+    </div>
+    <div class="login_admin form_hide">
+        <div class="admin_login_form">
+            <form>
+                <label>Email Address</label>
+                <input required type="email" name="email" />
+                <label>Password</label>
+                <input required type="text" name="password" />
+                <input type="submit" value="PROCEED TO LOG IN"/>
+            </form>
+        </div>
+    </div>
+    <div class="reg-option">
+        <a href="./register.html">Don't have an account?&nbsp; &nbsp;<span id="red">CREATE AN ACCOUNT</span></a>
+    </div>
+    <div class="footer_frame">
+        <iframe src="./footer.html" frameborder="0"></iframe>
+    </div>
+</body>
+</html>
+<script src="../functionalities/login.js" ></script>

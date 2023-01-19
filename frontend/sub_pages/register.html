@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+    <link rel="stylesheet" href="../styles/land.css"></link>
+    <link rel="stylesheet" href="../styles/reg.css"></link>
+    <link rel="stylesheet" href="../css/all.css"></link>
+</head>
+<body>
+    <div class="nav_frame">
+        <iframe src="./nav.html" frameborder="0"></iframe>
+    </div>
+    <div class="reg_head">
+        <h1>CREATE AN ACCOUNT</h1>
+    </div>
+    <div class="reg_opt">
+        <div class="default-a click_effect">Register as User</div>
+        <div class="default-b">Register as Admin</div>
+    </div>
+    <div class="reg_user">
+        <div class="user_reg_form">
+            <form>
+                <label>Name</label>
+                <input required type="text" name="name" />
+                <label>Email Address</label>
+                <input required type="email" name="email" />
+                <label>Password</label>
+                <input required type="text" name="password" />
+                <input type="submit" value="CREATE ACCOUNT"/>
+            </form>
+        </div>
+    </div>
+    <div class="reg_admin form_hide">
+        <div class="admin_reg_form">
+            <form>
+                <label>Name</label>
+                <input required type="text" name="name" />
+                <label>Email Address</label>
+                <input required type="email" name="email" />
+                <label>Password</label>
+                <input required type="text" name="password" />
+                <label>Admin verification Code</label>
+                <input required type="number" name="verification" />
+                <input type="submit" value="CREATE ACCOUNT"/>
+            </form>
+        </div>
+    </div>
+    <div class="footer_frame">
+        <iframe src="./footer.html" frameborder="0"></iframe>
+    </div>
+</body>
+</html>
+<script src="../functionalities/reg.js" ></script>
