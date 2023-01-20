@@ -15,7 +15,7 @@
     </div>
     <div class="mens_cont">
         <div class="mens-left">
-            <h4>FILTER BY</h4>
+            <p>FILTER BY:</p>
             <select name="category" class="m-category">
                 <option value="">CATEGORY</option>
                 <option value="Casual">CASUAL</option>
@@ -36,13 +36,20 @@
         </div>
         <div class="mens-right">
             <div class="m-sort-div">
-                <select name="sort" class="m-sort">
-                    <option value="">Relevance</option>
-                    <option value="htl">Price - High to Low</option>
-                    <option value="lth">Price - Low to High</option>
-                    <option value="asc">A-Z</option>
-                    <option value="desc">Z-A</option>
-                </select>
+                <div class="m-search">
+                    <input name="search" placeholder="Search Mens"/>
+                    <img src="https://cdn.modesens.com/static/img/search_keyword_icon_20180510.svg"/>
+                </div>
+                <div  class="m-sort">
+                    <p>Sort by :</p>
+                    <select name="sort">
+                        <option value="">Relevance</option>
+                        <option value="htl">Price - High to Low</option>
+                        <option value="lth">Price - Low to High</option>
+                        <option value="asc">A-Z</option>
+                        <option value="desc">Z-A</option>
+                    </select>
+                </div>
             </div>
             <div class="m-item-cont">
                 <!-- APPEND DATA -->

@@ -16,14 +16,14 @@ orderRouter.get("/", userAuth, async(req,res)=>{
     }
 })
 
-orderRouter.post("/create", userAuth,async(req,res)=>{
-    try{
-        const cart= await CartModel.find({userID:req.body.userID});
-        const items= await OrderModel.insertMany(cart);
-        res.send({"msg":"Products added to Order History"});
-    }catch(err){
-        res.send({"err in adding items to Order History":err});
-    }
-})
+// orderRouter.post("/create", userAuth,async(req,res)=>{
+//     try{
+//         const cart= await CartModel.find({userID:req.body.userID});
+//         const items= await OrderModel.insertMany(cart);
+//         res.send({"msg":"Products added to Order History"});
+//     }catch(err){
+//         res.send({"err in adding items to Order History":err});
+//     }
+// })
 
 module.exports={orderRouter};

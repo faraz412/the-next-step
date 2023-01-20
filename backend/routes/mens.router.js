@@ -15,6 +15,63 @@ mensRouter.get("/", async(req,res)=>{
     }
 })
 
+mensRouter.get("/filter", async(req,res)=>{
+    const query=req.query;
+    let category=query.category;
+    let color=query.color;
+    let mens;
+    try{
+        if(category && color){
+            mens=await MenModel.find({$and:[{category:{$regex:category,$options:"i"}},{color:{$regex:color,$options:"i"}}]});  
+        }else if(category){
+            mens=await MenModel.find({category:{$regex:category,$options:"i"}})
+        }else if(color){
+            mens=await MenModel.find({color:{$regex:color,$options:"i"}})
+        }       
+        res.send(mens);
+    }catch(err){
+        res.send({"err in getting filtered products":err})
+    }
+})
+
+mensRouter.get("/exc", async(req,res)=>{
+    try{
+        const mens1=await MenModel.find({offer:true});
+        res.send(mens1);
+    }catch(err){
+        res.send({"err in getting mens products":err});
+    }
+})
+
+mensRouter.get("/sort", async(req,res)=>{
+    let query=req.query;
+    let mens;
+    try{
+        if(query.sort=="lth"){
+            mens=await MenModel.find().sort({price:1});
+        }else if(query.sort=="htl"){
+            mens=await MenModel.find().sort({price:-1});
+        }else if(query.sort=="asc"){
+            mens=await MenModel.find().sort({title:1});
+        }else if(query.sort=="desc"){
+            mens=await MenModel.find().sort({title:-1});
+        }
+        res.send(mens);
+    }catch(err){
+        res.send({"err in getting mens products":err});
+    }
+})
+
+mensRouter.get("/search", async(req,res)=>{
+    let query=req.query;
+    try{
+        const mens=await MenModel.find({title:{$regex:query.q,$options:"i"}});
+        res.send(mens);
+    }catch(err){
+        res.send({"err in getting mens products":err});
+    }
+})
+
 mensRouter.post("/create", adminAuth, async(req,res)=>{
     const payload=req.body;
     try{

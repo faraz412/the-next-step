@@ -18,10 +18,13 @@ function displayItems(arr){
 
         imgdiv.append(img);
 
+        let sizeSelect=document.createElement("p");
+        sizeSelect.innerText="Select Size:";
+
         let minus=document.createElement("button");
-        minus.innerText="-";
+        minus.innerText=" - ";
         minus.addEventListener("click",(e)=>{
-            if(+size.innerText>=7 && +size.innerText<=13){
+            if(+size.innerText>7 && +size.innerText<=13){
                 +size.innerText--;
             }
         })
@@ -32,15 +35,16 @@ function displayItems(arr){
         let plus=document.createElement("button");
         plus.innerText="+";
         plus.addEventListener("click",(e)=>{
-            if(+size.innerText>=7 && +size.innerText<=13){
+            if(+size.innerText>=7 && +size.innerText<13){
                 +size.innerText++;
             }
         })
 
         let sizediv=document.createElement("div");
-        sizediv.append(minus,size,plus);
+        sizediv.setAttribute("class","shoe-size");
+        sizediv.append(sizeSelect,minus,size,plus);
         
-        let title=document.createElement("p");
+        let title=document.createElement("h4");
         title.innerText=elem.title;
 
         let category=document.createElement("p");
@@ -50,30 +54,39 @@ function displayItems(arr){
         color.innerText=elem.color;
 
         let exc=document.createElement("div");
+        exc.setAttribute("class","shoe-exc");
         exc.innerText="EXCLUSIVE";
         if(!elem.offer){
             exc.style.color="white";
+            exc.style.backgroundColor="white";
         }
 
         let rs=document.createElement("p");
         rs.innerText="Rs. ";
         let price=document.createElement("span");
-        price.innerText=elem.price;
+        price.innerText=elem.price.toFixed(2);
         rs.append(price);
 
         let leftdiv=document.createElement("div");
         leftdiv.setAttribute("class","shoe-left");
-        leftdiv.append(sizediv,title,category);
+        leftdiv.append(title,category,color);
 
         let rightdiv=document.createElement("div");
         rightdiv.setAttribute("class","shoe-right");
-        rightdiv.append(color,exc,rs);
+        rightdiv.append(exc,rs);
 
         let fulldiv=document.createElement("div");
         fulldiv.setAttribute("class","shoe-full");
         fulldiv.append(leftdiv,rightdiv);
 
-        div.append(imgdiv,fulldiv);
+        let cartdiv=document.createElement("div");
+        cartdiv.innerText="ADD TO CART";
+        cartdiv.setAttribute("class","shoe-cart");
+        cartdiv.addEventListener("click",(e)=>{
+            addCart(elem._id,elem.title,elem.avatar,elem.price,elem.category,elem.color,1,size.innerText);
+        })
+
+        div.append(imgdiv,fulldiv,sizediv,cartdiv);
 
         mensCont.append(div);
     })
@@ -85,6 +98,28 @@ async function getMensData(){
         if(res.ok){
             let data=await res.json();
             displayItems(data);
+        }
+    }catch(err){
+        alert(err);
+    }
+}
+
+async function addCart(productID,title,avatar,price,category,color,qty,size){
+    let payload={
+        productID,title,avatar,price,category,color,qty,size
+    }
+    try{
+        let res= await fetch(`${baseURL}cart/create`,{
+            method:"POST",
+            headers:{
+                "Content-type":"application/json",
+                "Authorization":`${localStorage.getItem("token")}`
+            },
+            body:JSON.stringify(payload)
+        })
+        if(res.ok){
+            let data=await res.json();
+            alert(data.msg);
         }
     }catch(err){
         alert(err);

@@ -5,7 +5,7 @@ const menSchema=mongoose.Schema({
     avatar:{type:String, required:true},
     price:{type:Number, required:true},
     category:{type:String, required:true},
-    exclusive:{type:Boolean, required:true},
+    offer:{type:Boolean, required:true},
     color:{type:String, required:true}
 },{versionKey:false});
 

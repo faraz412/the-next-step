@@ -1,6 +1,7 @@
 const express=require("express");
 require("dotenv").config();
 const {CartModel} =require("../models/cart.model.js");
+const {OrderModel}=require("../models/order.model.js");
 const {userAuth}=require("../middlewares/user.auth.js");
 
 const cartRouter=express.Router();
@@ -17,7 +18,7 @@ cartRouter.get("/", userAuth, async(req,res)=>{
 
 cartRouter.post("/create", userAuth, async(req,res)=>{
     const payload=req.body;
-    console.log(payload);
+    // console.log(payload);
     try{
         const item=await CartModel.find({productID:payload.productID});
         if(item.length==0){
@@ -52,19 +53,25 @@ cartRouter.patch("/update/:id", userAuth,async(req,res)=>{
 })
 
 
-cartRouter.delete("/delete", userAuth,async(req,res)=>{
+cartRouter.delete("/delete/all", userAuth,async(req,res)=>{
     try{
-        const item=await CartModel.findOne({});
-        const userID_in_item=item.userID;
-        const userID_req=req.body.userID;
-        if(userID_in_item==userID_req){
-            await CartModel.findByIdAndDelete();
-            res.send({"msg":"Cart Emptied"});
+        const item=await CartModel.findOne({userID:req.body.userID}); 
+        if(item){
+            const cart= await CartModel.find({userID:req.body.userID});
+            const items= await OrderModel.insertMany(cart);
+            await CartModel.deleteMany();
+            res.send({"msg":"Products added to Order History",
+            "msg":"Cart Emptied"});
+        // const userID_in_item=item.userID;
+        // const userID_req=req.body.userID;
+        // console.log(userID_in_item,userID_req);
+        // if(userID_in_item==userID_req){
         }else{
             res.send({"msg":"You are not authorized"});
         }
     }catch(err){
-        res.send({"err in updating cart data":err});
+        console.log(err);
+        res.send({"err in adding to order history":err});
     }
 })
 
