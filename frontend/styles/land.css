@@ -53,7 +53,7 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.nav_login:hover{
+.nav_login:hover,.nav_reg:hover{
     cursor: pointer;
 }
 .nav_frame>iframe{

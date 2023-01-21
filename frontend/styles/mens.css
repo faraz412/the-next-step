@@ -2,6 +2,10 @@
     margin:0;
     padding:0;
 }
+button:active {
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+}
 .mens_cont{
     /* border:1px solid black; */
     width:85%;
@@ -162,6 +166,10 @@ select:hover{
     background-color: red;
     color: white;
     border-radius: 2px;
+}
+.shoe-cart:active{
+    box-shadow: 0 1px red;
+    transform: translateY(2px);
 }
 .shoe-exc{
     background-color: rgb(103, 103, 103);

@@ -85,7 +85,7 @@ async function getCartdata(){
             }
         }
     }catch(err){
-        alert(err);
+        console.log(err);
     }
 }
 
@@ -108,7 +108,7 @@ async function updateQty(id,qty){
             getCartdata();
         }
     }catch(err){
-        alert(err);
+        console.log(err);
     }
 }
 
@@ -127,7 +127,7 @@ async function deleteItem(id){
             getCartdata();
         }
     }catch(err){
-        alert(err);
+        console.log(err);
     }
 }
 
@@ -150,7 +150,7 @@ async function emptyCart(){
             getCartdata();
         }
     }catch(err){
-        alert(err);
+        console.log(err);
     }
 }
 

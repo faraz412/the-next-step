@@ -27,6 +27,8 @@ mensRouter.get("/filter", async(req,res)=>{
             mens=await MenModel.find({category:{$regex:category,$options:"i"}})
         }else if(color){
             mens=await MenModel.find({color:{$regex:color,$options:"i"}})
+        }else{
+            mens=await MenModel.find();
         }       
         res.send(mens);
     }catch(err){
@@ -55,6 +57,8 @@ mensRouter.get("/sort", async(req,res)=>{
             mens=await MenModel.find().sort({title:1});
         }else if(query.sort=="desc"){
             mens=await MenModel.find().sort({title:-1});
+        }else{
+            mens=await MenModel.find();
         }
         res.send(mens);
     }catch(err){

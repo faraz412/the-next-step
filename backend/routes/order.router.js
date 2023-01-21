@@ -16,6 +16,17 @@ orderRouter.get("/", userAuth, async(req,res)=>{
     }
 })
 
+orderRouter.get("/search", userAuth, async(req,res)=>{
+    const userID=req.body.userID;
+    let query=req.query;
+    try{
+        const orders=await OrderModel.find({userID,title:{$regex:query.q,$options:"i"}});
+        res.send(orders);
+    }catch(err){
+        res.send({"err in getting ordered products":err});
+    }
+})
+
 // orderRouter.post("/create", userAuth,async(req,res)=>{
 //     try{
 //         const cart= await CartModel.find({userID:req.body.userID});

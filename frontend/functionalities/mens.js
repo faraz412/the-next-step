@@ -2,7 +2,9 @@ const baseURL="http://localhost:7777/";
 
 let mensCont=document.querySelector(".m-item-cont");
 
-getMensData();
+window.addEventListener("load",(e)=>{
+    getMensData();
+})
 
 function displayItems(arr){
     mensCont.innerHTML="";
@@ -83,7 +85,12 @@ function displayItems(arr){
         cartdiv.innerText="ADD TO CART";
         cartdiv.setAttribute("class","shoe-cart");
         cartdiv.addEventListener("click",(e)=>{
-            addCart(elem._id,elem.title,elem.avatar,elem.price,elem.category,elem.color,1,size.innerText);
+            if(!localStorage.getItem("token")){
+                alert("Please Login");
+                window,location.href="login.html";
+            }else{
+                addCart(elem._id,elem.title,elem.avatar,elem.price,elem.category,elem.color,1,size.innerText);
+            }
         })
 
         div.append(imgdiv,fulldiv,sizediv,cartdiv);
@@ -100,7 +107,7 @@ async function getMensData(){
             displayItems(data);
         }
     }catch(err){
-        alert(err);
+        console.log(err);
     }
 }
 
@@ -122,6 +129,91 @@ async function addCart(productID,title,avatar,price,category,color,qty,size){
             alert(data.msg);
         }
     }catch(err){
-        alert(err);
+        console.log(err);
     }
 }
+
+// ------------------ FILTER FUNCTIONALITY -----------------------//
+
+let mensCat=document.querySelector(".m-category");
+let mensCol=document.querySelector(".m-color");
+let mensExc=document.querySelector(".m-exc");
+let mensClr=document.querySelector(".m-clr");
+
+
+mensCat.addEventListener("change",async (e)=>{
+    let catValue=mensCat.value;
+    let colValue=mensCol.value;
+    try{
+        let res=await fetch(`${baseURL}mens/filter?category=${catValue}&color=${colValue}`);
+        if(res.ok){
+            let data=await res.json();
+            displayItems(data);
+        }
+    }catch(err){
+        console.log(err);
+    }
+})
+
+mensCol.addEventListener("change",async (e)=>{
+    let catValue=mensCat.value;
+    let colValue=mensCol.value;
+    try{
+        let res=await fetch(`${baseURL}mens/filter?category=${catValue}&color=${colValue}`);
+        if(res.ok){
+            let data=await res.json();
+            displayItems(data);
+        }
+    }catch(err){
+        console.log(err);
+    }
+})
+
+mensExc.addEventListener("click",async (e)=>{
+    try{
+        let res=await fetch(`${baseURL}mens/exc`);
+        if(res.ok){
+            let data=await res.json();
+            displayItems(data);
+        }
+    }catch(err){
+        console.log(err);
+    }
+})
+
+mensClr.addEventListener("click",(e)=>{
+    mensCat.value="";
+    mensCol.value="";
+    getMensData();
+})
+
+// ------------------ SEARCH & SORT FUNCTIONALITY -----------------------//
+
+let mSearch=document.querySelector(".m-search>input");
+let mSort=document.querySelector(".m-sort>select");
+
+mSearch.addEventListener("input", async(e)=>{
+    let searchVal=mSearch.value;
+    try{
+        let res=await fetch(`${baseURL}mens/search?q=${searchVal}`);
+        if(res.ok){
+            let data=await res.json();
+            displayItems(data);
+        }
+    }catch(err){
+        console.log(err);
+    }
+})
+
+mSort.addEventListener("change", async(e)=>{
+    let sortVal=mSort.value;
+    try{
+        let res=await fetch(`${baseURL}mens/sort?sort=${sortVal}`);
+        if(res.ok){
+            let data=await res.json();
+            displayItems(data);
+        }
+    }catch(err){
+        console.log(err);
+    }
+})

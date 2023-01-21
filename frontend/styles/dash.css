@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+}
+body button:hover{
+    cursor: pointer;
+}
+.dash_head{
+    width:90%;
+    display:flex;
+    justify-content: space-between;
+    margin:20px auto;
+    border-bottom: 1px solid lightgray;
+    letter-spacing: 2px;
+}
+.dash_form_div{
+    width:90%;
+    margin:auto;
+    border:1px solid blue;
+    display: flex;
+}
+.form_head{
+    width:15%;
+}
+.form_body{
+    width:84%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form_body input{
+    margin:0 10px;
+}
+.dash_data{
+    border:1px solid black;
+    width:90%;
+    margin:10px auto;
+}
+.head{
+    display:flex;
+}
+.head>h4{
+    border:1px solid brown;
+    width:10%;
+    text-align: center;
+    margin:0 8px;
+}
+.dash_cont input{
+    margin:0 6px;
+    width:10%;
+}
+.dash_cont button{
+    margin:0 6px;
+    width:10%;
+}
+
+
+.d-search{
+    /* border:1px solid blue; */
+    width:30%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+.d-search>input{
+    padding:8px 5px;
+    font-size: 15px;
+    width:85%;
+    border: none;
+}
+.d-search>input:focus{
+    outline: none;
+}
