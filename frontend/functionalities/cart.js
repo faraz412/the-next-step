@@ -1,4 +1,4 @@
-const baseURL="http://localhost:7777/";
+const baseURL="https://gold-lazy-newt.cyclic.app/";
 
 let subtotal=document.querySelectorAll(".total");
 let checkout=document.querySelector("#checkout");
