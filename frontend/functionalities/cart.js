@@ -146,8 +146,8 @@ async function emptyCart(){
         })
         if(res.ok){
             let data=await res.json();
-            console.log(data);
-            getCartdata();
+            alert(data.msg1);
+            window.location.href="order.html";
         }
     }catch(err){
         console.log(err);

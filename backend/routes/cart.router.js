@@ -60,8 +60,8 @@ cartRouter.delete("/delete/all", userAuth,async(req,res)=>{
             const cart= await CartModel.find({userID:req.body.userID});
             const items= await OrderModel.insertMany(cart);
             await CartModel.deleteMany();
-            res.send({"msg":"Products added to Order History",
-            "msg":"Cart Emptied"});
+            res.send({"msg1":"Products checked out to Order History",
+            "msg2":"Cart Emptied"});
         // const userID_in_item=item.userID;
         // const userID_req=req.body.userID;
         // console.log(userID_in_item,userID_req);

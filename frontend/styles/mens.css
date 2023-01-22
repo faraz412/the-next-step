@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
 }
-button:active {
+body button:active {
     box-shadow: 0 1px #666;
     transform: translateY(1px);
 }
@@ -10,6 +10,7 @@ button:active {
     /* border:1px solid black; */
     width:85%;
     margin:20px auto;
+    margin-top:120px;
     display:flex;
     justify-content: space-between;
 }
@@ -37,8 +38,8 @@ select:hover{
 }
 .mens-left>button{
     border: none;
-    background-color: rgb(103, 103, 103);
-    border-radius: 2px;
+    background-color:  black;
+    border-radius: 5px;
     color:white;
     padding:10px 12px;
     font-size: 15px;
@@ -51,7 +52,7 @@ select:hover{
     width:78%;
 }
 .m-sort-div{
-    width:95%;
+    width:100%;
     /* border:1px solid red; */
     display: flex;
     justify-content: space-between;
@@ -84,10 +85,15 @@ select:hover{
     font-size: 15px;
     color: rgb(112, 111, 111);
 }
+.m-sort>p{
+    /* border:1px solid red; */
+    width:35%;
+}
 .m-sort>select{
+    /* border:1px solid red; */
     padding:8px 5px;
     font-size: 15px;
-    width:80%;
+    width:65%;
     border: none;
     color: rgb(112, 111, 111);
 }
@@ -97,7 +103,7 @@ select:hover{
 .m-item-cont{
     display:grid;
     grid-template-columns: repeat(3,1fr);
-    gap:10px;
+    gap:15px;
 }
 .single-shoe{
     border:1px solid lightgray;
@@ -140,7 +146,7 @@ select:hover{
     padding-left: 20px;
 }
 .shoe-size{
-    border:1px solid lightgray;
+    border:1px solid rgb(177, 175, 175);
     border-radius: 5px;
     width:60%;
     margin: auto;
@@ -155,7 +161,7 @@ select:hover{
 }
 .shoe-size>button{
     border:none;
-    background-color: red;
+    background-color: rgb(154, 11, 11);
     border-radius: 3px;
     color: white;
     padding:5px 10px;
@@ -163,21 +169,53 @@ select:hover{
 .shoe-cart{
     text-align: center;
     padding:10px 0;
-    background-color: red;
+    background-color: rgb(154, 11, 11);
     color: white;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 .shoe-cart:active{
-    box-shadow: 0 1px red;
+    box-shadow: 0 1px rgb(154, 11, 11);
     transform: translateY(2px);
 }
 .shoe-exc{
-    background-color: rgb(103, 103, 103);
-    border-radius: 2px;
-    width:60%;
-    color:white;
-    padding:5px 12px;
+    border-radius: 3px;
+    width:60%; 
+    font-weight: bold; 
+    color:rgb(154, 11, 11);
 }
 .shoe-size>button:hover,.shoe-cart:hover{
     cursor: pointer;
+}
+
+
+@media all and (min-width:701px) and (max-width:1200px){
+    .m-item-cont{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .shoe-size{
+        width:75%;
+    }
+}
+@media all and (min-width:300px) and (max-width:700px){
+    .mens_cont{
+        display: flex;
+        flex-direction: column;
+    }
+    .mens-left{
+        width:100%;
+    }
+    .mens-right{
+        width:100%;
+    }
+    .m-item-cont{
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .m-sort{
+        width: 55%;
+    }
+    .m-sort>p{
+        width:40%;
+    }
 }

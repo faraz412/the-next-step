@@ -29,8 +29,8 @@
                 <h4 style="font-size:25px" >ON YOUR FIRST ORDER</h4> 
                 <h4 style="font-size:25px" >USE CODE: FIRST</h4>-->
                 <div class="land_offer_btns">
-                    <button>Shop Mens</button>
-                    <button>Shop Womens</button>
+                    <button class="btn_click">Shop Mens</button>
+                    <button class="btn_click">Shop Womens</button>
                 </div>
                 <p>For more details see the <a style="color:black" href="./index.html">terms & conditions</a></p>
             </div>
@@ -44,14 +44,14 @@
             <img alt="winter_banner" src="https://clarks.scene7.com/is/image/Pangaea2Build/AW22WOriannaMidDarkSandSuedeOnsiteBannerDesktop1500x500?fmt=webp&wid=1500" />
         </div>
         <div class="winter_reboot_info">
-            <h1 style="font-size:45px">WINTER REBOOT</h1>
+            <h1>WINTER REBOOT</h1>
             <p>Reworking a staple shoe in iconic style, meet our Orianna Mid boot. Crafted in responsibly sourced dark sand 
                 suede for a premium look, its chunky profile ticks the box for on-trend, while snug faux shearling linings 
                 keeps toes toasty when braving cooler climes. TNS’ stitching detail nods to our heritage, making every 
                 tread timeless, too.</p>
             <div class="winter_reboot_btns">
-                <button>Shop Men's Boots</button>
-                <button>Shop Women's Boots</button>
+                <button class="btn_click">Shop Men's Boots</button>
+                <button class="btn_click">Shop Women's Boots</button>
             </div>
         </div>
     </div>
@@ -90,7 +90,7 @@
             <img alt="banner" src="https://clarks.scene7.com/is/image/Pangaea2Build/ClarksHomepageBanner8thSt1500x500?fmt=webp&wid=1500"/>
         </div>
         <div class="eight_street_info">
-            <h1 style="font-size:37px">8TH STREET BY RONNIE FIEG FOR TNS ORIGINALS</h1>
+            <h1>8TH STREET BY RONNIE FIEG FOR TNS ORIGINALS</h1>
             <p>With nearly three decades of footwear industry expertise to his name, American designer and founder of Kith Ronnie Fieg 
                 is a bona fide classic kicks aficionado- making him the perfect partner for a Clarks Originals collab.
             </p>
@@ -104,13 +104,13 @@
             <div class="women_section">
                 <img alt="img" src="https://clarks.scene7.com/is/image/Pangaea2Build/MagnoliaZipBlackLeather852x852px?&fmt=png-alpha" />
                 <div class="women_text">
-                    <a>Shop Womens</a>
+                    <a href="./sub_pages/mens.html">Shop Womens</a>
                 </div>
             </div>
             <div class="men_section">
                 <img alt="img" src="https://clarks.scene7.com/is/image/Pangaea2Build/MNature5TieBeeswaxLeather852x852px?&fmt=png-alpha" />
                 <div class="men_text">
-                    <a>Shop Mens</a>
+                    <a href="./sub_pages/mens.html">Shop Mens</a>   
                 </div>
             </div>
         </div>
@@ -123,3 +123,12 @@
     </div>
 </body>
 </html>
+<script>
+    let btnClicks=document.querySelectorAll(".btn_click");
+
+    for(let btnClick of btnClicks){
+        btnClick.addEventListener("click",(e)=>{
+            window.location.href="./sub_pages/mens.html";
+        })
+    }
+</script>

@@ -1,6 +1,7 @@
 .login_head{
     width:85%;
     margin:auto;
+    margin-top:120px;
     letter-spacing: 2px;
 }
 .login_opt{
@@ -73,4 +74,9 @@
 #red{
     color: rgb(255, 60, 0);
     text-decoration: underline;
+}
+@media all and (min-width:300px) and (max-width:700px){
+    .user_login_form,.admin_login_form{
+        width:70%;
+    }
 }

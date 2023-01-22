@@ -8,6 +8,7 @@ body button:hover{
 .cart_head{
     width:85%;
     margin:20px auto;
+    margin-top:120px;
     border-bottom: 1px solid lightgray;
     letter-spacing: 2px;
 }
@@ -48,7 +49,7 @@ body button:hover{
     font-size: 17px;
     padding:10px;
     color:white;
-    background-color: red;
+    background-color: rgb(154, 11, 11);
     border-radius: 5px;
 }
 
@@ -101,7 +102,7 @@ body button:hover{
     padding: 10px 10px;
     color: white;
     border: none;
-    background-color: red;
+    background-color: rgb(154, 11, 11);
     border-radius: 5px;
 }
 
@@ -120,7 +121,8 @@ body button:hover{
     padding: 5px 10px 5px 10px;
     color: white;
     border: none;
-    background-color: red;
+    border-radius: 2px;
+    background-color: rgb(154, 11, 11);
 }
 .cartcont>div>div:nth-child(2)>div>*{
     width:33%;
@@ -142,4 +144,62 @@ body button:hover{
 
 .cartcont img {
     object-fit: contain;
+}
+
+@media all and (min-width:701px) and (max-width:1200px){
+    .cartcont>div>div:nth-child(2) {
+        width:40%;
+        padding-left: 25px;
+    }
+}
+
+@media all and (min-width:300px) and (max-width:700px){
+    .cart_data{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+    .cart-left{
+        width:95%;
+        margin: auto;
+    }
+    .cart-right{
+        /* border:1px solid red; */
+        width:95%;
+        margin: auto;
+    }
+    .cartcont{
+        margin:auto;
+    }
+    .cartcont>div {
+        border:1px solid blue;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cartcont>div>div:nth-child(1) {
+        width: 100%;
+    }
+    
+    .cartcont>div>div:nth-child(1)>img:hover {
+        cursor: zoom-in;
+    }
+    
+    .cartcont>div>div:nth-child(2) {
+        border:1px solid black;
+        width: 95%;
+        font-size: 20px;
+        text-align: center;
+        margin:10px auto;
+        justify-content: center;
+        padding-left: 0px;
+    }
+    .cartcont>div>div:nth-child(2)>div {
+        width:70%;
+        margin: 10px auto;
+    }
+    .cart_head{
+        text-align: center;
+    }
 }

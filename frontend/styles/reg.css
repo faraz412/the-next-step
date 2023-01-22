@@ -1,6 +1,7 @@
 .reg_head{
     width:85%;
     margin:auto;
+    margin-top:120px;
     letter-spacing: 2px;
 }
 .reg_opt{
@@ -61,4 +62,13 @@
 }
 .form_hide{
     display: none;
+}
+
+@media all and (min-width:300px) and (max-width:700px){
+    .user_reg_form,.admin_reg_form{
+        width:80%;
+    }
+    .reg_head{
+        text-align: center;
+    }
 }

@@ -10,6 +10,7 @@ body button:hover{
     display:flex;
     justify-content: space-between;
     margin:20px auto;
+    margin-top:120px;
     border-bottom: 1px solid lightgray;
     letter-spacing: 2px;
 }
@@ -84,37 +85,6 @@ body button:hover{
 .ordercont>div>div:nth-child(2)>p~h3 {
     margin-top:10px;
 }
-
-.ordercont>div>div:nth-child(2)>button {
-    font-size: 16px;
-    padding: 10px 10px;
-    color: white;
-    border: none;
-    background-color: red;
-    border-radius: 5px;
-}
-
-.ordercont>div>div:nth-child(2)>div {
-    border:1px solid lightgray;
-    border-radius: 5px;
-    padding:2px;
-    display: flex;
-    margin: 10px 0;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.ordercont>div>div:nth-child(2)>div>button {
-    font-size: 20px;
-    padding: 5px 10px 5px 10px;
-    color: white;
-    border: none;
-    background-color: red;
-}
-.ordercont>div>div:nth-child(2)>div>*{
-    width:33%;
-    text-align: center;
-}
 .order-empty {
     width: 50%;
     display: flex;
@@ -131,4 +101,24 @@ body button:hover{
 
 .ordercont img {
     object-fit: contain;
+}
+
+@media all and (min-width:300px) and (max-width:700px){
+    .order_head{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .o-search{
+        border-top: 1px solid gray;
+        width: 85%;
+        margin: auto;
+    }
+    .order_data{
+        width: 72%;
+    }
+    .ordercont>div>div:nth-child(2) {
+        width:40%;
+        padding-left: 25px;
+    }
 }

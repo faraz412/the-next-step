@@ -47,7 +47,7 @@ userLogForm.addEventListener("submit", async (e)=>{
             localStorage.setItem("token",data.token);
             localStorage.setItem("name",data.userName);
             alert(data.msg);
-            // window.location.href="../index.html";
+            window.location.href="../index.html";
         }
     }catch(err){
         alert(err);
@@ -58,12 +58,12 @@ adminLogForm.addEventListener("submit", async (e)=>{
     e.preventDefault();
 
     let payload={
-        email:adminRegForm.email.value,
-        password:adminRegForm.password.value,
+        email:adminLogForm.email.value,
+        password:adminLogForm.password.value,
     };
 
     try{
-        let res= await fetch(`${baseURL}admin/register`,{
+        let res= await fetch(`${baseURL}admin/login`,{
             method: "POST",
             headers: {
                 "Content-type":"application/json"
@@ -72,11 +72,11 @@ adminLogForm.addEventListener("submit", async (e)=>{
         })
         if(res.ok){
             let data=await res.json();
-            console.log(data);
+            //console.log(data);
             localStorage.setItem("token",data.token);
-            localStorage.setItem("name",data.admin);
+            localStorage.setItem("admin",data.admin);
             alert(data.msg);
-            // window.location.href="index.html";
+            window.location.href="dash.html";
         }
     }catch(err){
         aler(err);
