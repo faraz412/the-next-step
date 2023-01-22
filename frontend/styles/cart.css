@@ -1,0 +1,205 @@
+*{
+    margin:0;
+    padding:0;
+}
+body button:hover{
+    cursor: pointer;
+}
+.cart_head{
+    width:85%;
+    margin:20px auto;
+    margin-top:120px;
+    border-bottom: 1px solid lightgray;
+    letter-spacing: 2px;
+}
+.cart_data{
+    /* border:1px solid black; */
+    width:85%;
+    margin:30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.cart-left{
+    width:60%;
+}
+.cart-right{
+    /* border:1px solid red; */
+    width:30%;
+}
+.cart-total{
+    height:300px;
+    /* border:1px solid blue; */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.cart-total>*{
+    width:100%;
+    /* border:1px solid red; */
+}
+.cart-total>div{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid lightgray;
+}
+#checkout{
+    margin:auto;
+    border:none;
+    font-size: 17px;
+    padding:10px;
+    color:white;
+    background-color: rgb(154, 11, 11);
+    border-radius: 5px;
+}
+
+.cartcont {
+    margin:auto;
+    width: 100%;
+}
+.cartcont>div {
+    display: flex;
+    margin: 20px auto;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.cartcont>div>div:nth-child(1) {
+    width: 50%;
+    height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.cartcont>div>div:nth-child(1)>img {
+    width: 100%;
+    height: 250px;
+}
+
+.cartcont>div>div:nth-child(1)>img:hover {
+    cursor: zoom-in;
+}
+
+.cartcont>div>div:nth-child(2) {
+    /* border:1px solid black; */
+    margin:10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+.cartcont>div>div:nth-child(2)>h3{
+    margin-bottom:10px;
+}
+.cartcont>div>div:nth-child(2)>p {
+    margin-bottom:2px;
+}
+
+.cartcont>div>div:nth-child(2)>p~h3 {
+    margin-top:10px;
+}
+
+.cartcont>div>div:nth-child(2)>button {
+    font-size: 16px;
+    padding: 10px 10px;
+    color: white;
+    border: none;
+    background-color: rgb(154, 11, 11);
+    border-radius: 5px;
+}
+
+.cartcont>div>div:nth-child(2)>div {
+    border:1px solid lightgray;
+    border-radius: 5px;
+    padding:2px;
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartcont>div>div:nth-child(2)>div>button {
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(154, 11, 11);
+}
+.cartcont>div>div:nth-child(2)>div>*{
+    width:33%;
+    text-align: center;
+}
+.cart-empty {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.cart-empty img{
+    width: 70%;
+}
+
+.hide-div {
+    display: none;
+}
+
+.cartcont img {
+    object-fit: contain;
+}
+
+@media all and (min-width:701px) and (max-width:1200px){
+    .cartcont>div>div:nth-child(2) {
+        width:40%;
+        padding-left: 25px;
+    }
+}
+
+@media all and (min-width:300px) and (max-width:700px){
+    .cart_data{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+    .cart-left{
+        width:95%;
+        margin: auto;
+    }
+    .cart-right{
+        /* border:1px solid red; */
+        width:95%;
+        margin: auto;
+    }
+    .cartcont{
+        margin:auto;
+    }
+    .cartcont>div {
+        border:1px solid blue;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cartcont>div>div:nth-child(1) {
+        width: 100%;
+    }
+    
+    .cartcont>div>div:nth-child(1)>img:hover {
+        cursor: zoom-in;
+    }
+    
+    .cartcont>div>div:nth-child(2) {
+        border:1px solid black;
+        width: 95%;
+        font-size: 20px;
+        text-align: center;
+        margin:10px auto;
+        justify-content: center;
+        padding-left: 0px;
+    }
+    .cartcont>div>div:nth-child(2)>div {
+        width:70%;
+        margin: 10px auto;
+    }
+    .cart_head{
+        text-align: center;
+    }
+}

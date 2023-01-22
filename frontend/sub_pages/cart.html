@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CART</title>
+    <link rel="stylesheet" href="../styles/land.css"></link>
+    <link rel="stylesheet" href="../styles/cart.css"></link>
+    <link rel="stylesheet" href="../css/all.css"></link>
+</head>
+<body>
+    <div class="nav_frame">
+        <iframe src="./nav.html" frameborder="0"></iframe>
+    </div>
+    <div class="cart_head">
+        <h1>MY SHOPPING CART</h1>
+    </div>
+    <div class="cart-empty hide-div">
+        <img alt="Cart empty" src="https://www.seekpng.com/png/full/117-1170538_404-your-cart-is-empty.png" />
+    </div>
+    <div class="cart_data">
+        <div class="cart-left">
+            <div class="cartcont">
+                <!-- append cartdata -->
+            </div>
+        </div>
+        <div class="cart-right">
+            <div class="cart-total">
+                <h3 style="text-decoration:underline">Cart Summary</h3>
+                <div>
+                    <p>Subtotal</p>
+                    <h4>Rs. <span class="total">0.00</span></h4>
+                </div>
+                <div>
+                    <p>Taxes</p>
+                    <h4>Rs. 0.00</h4>
+                </div>
+                <div>
+                    <p>Grand Total</p>
+                    <h4>Rs. <span class="total">0.00</span></h4>
+                </div>
+                <div>
+                    <button id="checkout">PROCEED TO CHECKOUT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer_frame">
+        <iframe src="./footer.html" frameborder="0"></iframe>
+    </div>
+</body>
+</html>
+<script src="../functionalities/cart.js" ></script>

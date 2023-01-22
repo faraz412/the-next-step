@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="./styles/land.css"></link>
+    <link rel="stylesheet" href="./css/all.css"></link>
+</head>
+<body>
+
+    <!-- NAVBAR SECTION -->
+
+    <div class="nav_frame">
+        <iframe src="./sub_pages/nav.html" frameborder="0"></iframe>
+    </div>
+
+    <!-- OFFER BANNER SECTION -->
+
+    <div class="land_banner">
+        <div>
+            <img src="https://clarks.scene7.com/is/image/Pangaea2Build/AW22ClearanceUpto50offSelectStylesPhase2DesktopBanner1500x500pxjpg?fmt=pjpeg&amp;wid=1440&amp;qlt=100"/>
+            <div class="land_offer" >
+                <img src="./avatar//offer.png"/>
+                <!-- <h1 style="font-size:50px">WINTER CLEARANCE</h1>
+                <h4 style="font-size:25px">SAVE UP TO</h4>
+                <h1 style="font-size:50px">50% OFF*</h1>
+                <h4 style="font-size:25px" >ON YOUR FIRST ORDER</h4> 
+                <h4 style="font-size:25px" >USE CODE: FIRST</h4>-->
+                <div class="land_offer_btns">
+                    <button class="btn_click">Shop Mens</button>
+                    <button class="btn_click">Shop Womens</button>
+                </div>
+                <p>For more details see the <a style="color:black" href="./index.html">terms & conditions</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- WINTER REBOOT SECTION -->
+
+    <div class="winter_reboot">
+        <div class="winter_reboot_img">
+            <img alt="winter_banner" src="https://clarks.scene7.com/is/image/Pangaea2Build/AW22WOriannaMidDarkSandSuedeOnsiteBannerDesktop1500x500?fmt=webp&wid=1500" />
+        </div>
+        <div class="winter_reboot_info">
+            <h1>WINTER REBOOT</h1>
+            <p>Reworking a staple shoe in iconic style, meet our Orianna Mid boot. Crafted in responsibly sourced dark sand 
+                suede for a premium look, its chunky profile ticks the box for on-trend, while snug faux shearling linings 
+                keeps toes toasty when braving cooler climes. TNS’ stitching detail nods to our heritage, making every 
+                tread timeless, too.</p>
+            <div class="winter_reboot_btns">
+                <button class="btn_click">Shop Men's Boots</button>
+                <button class="btn_click">Shop Women's Boots</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COMFORT SECTION -->
+
+    <div class="comfort_section">
+        <div class="comfort_left">
+            <div class="comfort_left_img">
+                <img alt="banner" src="https://clarks.scene7.com/is/image/Pangaea2Build/BANWKS50and51OpalZipPeppleSuedeTabletBanner705x395px?fmt=webp&wid=705"/>
+            </div>
+            <div class="comfort_left_info">
+                <h2>COMFORTABLY WARM</h2>
+                <p>Keep warm, and look cool in Opal Sky, our Chelsea-inspired suede upper boot.  
+                    Step out in feel-good style every time with our Ultimate Comfort footbed and slip-resistant sole.
+                </p>
+            </div>
+        </div>
+        <div class="comfort_right">
+            <div class="comfort_right_img">
+                <img alt="banner" src="https://clarks.scene7.com/is/image/Pangaea2Build/AW22CostonWallyWPDarkSandWLinedOnsiteBannerTablet705x397?fmt=webp&wid=705"/>
+            </div>
+            <div class="comfort_right_info">
+                <h2>WEATHER READY WITH A TWIST</h2>
+                <p>A fresh take on the iconic Wallabee profile, our Corston Wally WP boot melds heritage style with a winter-ready twist. 
+                    With a fully waterproof finish and snug faux fur linings – the weather’s not dampening our plans!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8th STREET SECTION -->
+
+    <div class="eight_street_section">
+        <div>
+            <img alt="banner" src="https://clarks.scene7.com/is/image/Pangaea2Build/ClarksHomepageBanner8thSt1500x500?fmt=webp&wid=1500"/>
+        </div>
+        <div class="eight_street_info">
+            <h1>8TH STREET BY RONNIE FIEG FOR TNS ORIGINALS</h1>
+            <p>With nearly three decades of footwear industry expertise to his name, American designer and founder of Kith Ronnie Fieg 
+                is a bona fide classic kicks aficionado- making him the perfect partner for a Clarks Originals collab.
+            </p>
+        </div>
+    </div>
+
+    <!-- MENS/WOMENS SECTIONS -->
+
+    <div>
+        <div class="sections">
+            <div class="women_section">
+                <img alt="img" src="https://clarks.scene7.com/is/image/Pangaea2Build/MagnoliaZipBlackLeather852x852px?&fmt=png-alpha" />
+                <div class="women_text">
+                    <a href="./sub_pages/mens.html">Shop Womens</a>
+                </div>
+            </div>
+            <div class="men_section">
+                <img alt="img" src="https://clarks.scene7.com/is/image/Pangaea2Build/MNature5TieBeeswaxLeather852x852px?&fmt=png-alpha" />
+                <div class="men_text">
+                    <a href="./sub_pages/mens.html">Shop Mens</a>   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+
+    <div class="footer_frame">
+        <iframe src="./sub_pages/footer.html" frameborder="0"></iframe>
+    </div>
+</body>
+</html>
+<script>
+    let btnClicks=document.querySelectorAll(".btn_click");
+
+    for(let btnClick of btnClicks){
+        btnClick.addEventListener("click",(e)=>{
+            window.location.href="./sub_pages/mens.html";
+        })
+    }
+</script>

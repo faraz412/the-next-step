@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+}
+body button:hover{
+    cursor: pointer;
+}
+body button:active {
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+}
+.dash_head{
+    width:90%;
+    display:flex;
+    justify-content: space-between;
+    margin:20px auto;
+    margin-top:120px;
+    border-bottom: 1px solid lightgray;
+    letter-spacing: 2px;
+}
+.dash_form_div{
+    width:90%;
+    margin:20px auto;
+    padding:10px 0;
+    border-top:1px solid lightgrey;
+    border-bottom:1px solid lightgrey;
+    display: flex;
+    justify-content: space-around;
+}
+.form_head{
+    width:15%;
+    text-decoration: underline;
+    /* border:1px solid red; */
+    display: flex;
+    align-items: center;
+}
+.form_body{
+    /* border:1px solid black; */
+    width:84%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form_body input{
+    margin:0 7px;
+    padding: 5px 0;
+    border:1px solid lightgray;
+    text-align: center;
+}
+.form_body input:focus,.form_body select:focus{
+    outline: 1px solid cyan;
+}
+.form_body input[type="submit"]{
+    border:1px solid gray;
+    border-radius: 2px;
+    padding: 5px 10px;
+}
+.form_body input[type="submit"]:active{
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+}
+.form_body select{
+    margin:0 7px;
+    padding: 5px 0;
+    border:1px solid gray;
+}
+.dash_data{
+    border:1px solid lightgrey;
+    width:90%;
+    margin:10px auto;
+}
+.dash_cont div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.dash_cont input{
+    margin:5px 6px;
+    width:5%;
+    text-align: center;
+}
+.tdiv{
+    border-bottom: 1px solid lightgray;
+    background-color: lightgrey;
+}
+.tdiv>input{
+    font-weight: bold;
+    border: 1px solid lightgrey;
+    background-color: lightgrey;
+    text-decoration: underline;
+}
+.tdiv>input:focus{
+    outline: none;
+}
+.tdiv>button{
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.bdiv{
+    border-bottom: 1px solid lightgray;
+}
+.bdiv>input{
+    padding: 5px 0;
+    border:1px solid lightgray;
+}
+.bdiv>input:focus{
+    outline: none;
+}
+.bdiv>button{
+    border:1px solid gray;
+    border-radius: 2px;
+    padding: 5px 0;
+}
+.dash_cont img{
+    width:6%;
+}
+.dash_cont>div input:nth-child(2),.dash_cont>div input:nth-child(4){
+    width:14%;
+}
+.dash_cont>div input:nth-child(3){
+    width:7%;
+}
+.dash_cont button{
+    width:5%;
+}
+.d-search{
+    /* border:1px solid blue; */
+    width:30%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+.d-search>input{
+    padding:8px 5px;
+    font-size: 15px;
+    width:85%;
+    border: none;
+}
+.d-search>input:focus{
+    outline: none;
+}

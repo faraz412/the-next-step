@@ -1,0 +1,221 @@
+*{
+    margin:0;
+    padding:0;
+}
+body button:active {
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+}
+.mens_cont{
+    /* border:1px solid black; */
+    width:85%;
+    margin:20px auto;
+    margin-top:120px;
+    display:flex;
+    justify-content: space-between;
+}
+select:hover{
+    cursor: pointer;
+}
+.mens-left{
+    /* border:1px solid red; */
+    padding-top: 15px;
+    width:20%;
+    display: flex;
+    flex-direction: column;
+}
+.mens-left>*{
+    margin:10px auto;
+    width:100%;
+}
+.mens-left>select{
+    padding:8px 5px;
+    font-size: 15px;
+    color: rgb(112, 111, 111);
+}
+.mens-left>select:focus{
+    outline: none;
+}
+.mens-left>button{
+    border: none;
+    background-color:  black;
+    border-radius: 5px;
+    color:white;
+    padding:10px 12px;
+    font-size: 15px;
+}
+.mens-left>button:hover{
+    cursor: pointer;
+}
+.mens-right{
+    /* border:1px solid blue; */
+    width:78%;
+}
+.m-sort-div{
+    width:100%;
+    /* border:1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    margin:15px auto;
+}
+.m-search{
+    /* border:1px solid blue; */
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+}
+.m-search>input{
+    padding:8px 5px;
+    font-size: 15px;
+    width:90%;
+    border: none;
+}
+.m-search>input:focus{
+    outline: none;
+}
+.m-sort{
+    /* border:1px solid blue; */
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+    font-size: 15px;
+    color: rgb(112, 111, 111);
+}
+.m-sort>p{
+    /* border:1px solid red; */
+    width:35%;
+}
+.m-sort>select{
+    /* border:1px solid red; */
+    padding:8px 5px;
+    font-size: 15px;
+    width:65%;
+    border: none;
+    color: rgb(112, 111, 111);
+}
+.m-sort>select:focus{
+    outline: none;
+}
+.m-item-cont{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+}
+.single-shoe{
+    border:1px solid lightgray;
+    border-radius: 5px;
+}
+.single-shoe img{
+    width:100%;
+}
+.shoe-full{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+.shoe-left{
+    width:49%;
+    /* border:1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+}
+.shoe-left>*{
+    margin:5px 0;
+    letter-spacing: 1px;
+}
+.shoe-left>p{
+    color:rgb(80, 79, 79);
+    font-size: 15px;
+}
+.shoe-right>p{
+    color:rgb(80, 79, 79);
+}
+.shoe-right{
+    width:49%;
+    /* border:1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+}
+.shoe-size{
+    border:1px solid rgb(177, 175, 175);
+    border-radius: 5px;
+    width:60%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:5px auto;
+    padding:2px 5px;
+}
+.shoe-size>p{
+    color:rgb(80, 79, 79);
+}
+.shoe-size>button{
+    border:none;
+    background-color: rgb(154, 11, 11);
+    border-radius: 3px;
+    color: white;
+    padding:5px 10px;
+}
+.shoe-cart{
+    text-align: center;
+    padding:10px 0;
+    background-color: rgb(154, 11, 11);
+    color: white;
+    border-radius: 5px;
+}
+.shoe-cart:active{
+    box-shadow: 0 1px rgb(154, 11, 11);
+    transform: translateY(2px);
+}
+.shoe-exc{
+    border-radius: 3px;
+    width:60%; 
+    font-weight: bold; 
+    color:rgb(154, 11, 11);
+}
+.shoe-size>button:hover,.shoe-cart:hover{
+    cursor: pointer;
+}
+
+
+@media all and (min-width:701px) and (max-width:1200px){
+    .m-item-cont{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .shoe-size{
+        width:75%;
+    }
+}
+@media all and (min-width:300px) and (max-width:700px){
+    .mens_cont{
+        display: flex;
+        flex-direction: column;
+    }
+    .mens-left{
+        width:100%;
+    }
+    .mens-right{
+        width:100%;
+    }
+    .m-item-cont{
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .m-sort{
+        width: 55%;
+    }
+    .m-sort>p{
+        width:40%;
+    }
+}
