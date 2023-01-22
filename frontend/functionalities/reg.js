@@ -1,4 +1,4 @@
-const baseURL="http://localhost:7777/";
+const baseURL="https://gold-lazy-newt.cyclic.app/";
 
 /*---------------------User/Admin switch functionality------------------*/
 

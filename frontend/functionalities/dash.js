@@ -1,5 +1,5 @@
-    let dashCont=document.querySelector(".dash_cont");
-const baseURL="http://localhost:7777/";
+let dashCont=document.querySelector(".dash_cont");
+const baseURL="https://gold-lazy-newt.cyclic.app/";
 
 getProducts();
 
