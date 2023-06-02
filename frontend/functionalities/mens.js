@@ -2,9 +2,8 @@ const baseURL="https://gold-lazy-newt.cyclic.app/";
 
 let mensCont=document.querySelector(".m-item-cont");
 
-window.addEventListener("load",(e)=>{
-    getMensData();
-})
+getMensData();
+
 
 function displayItems(arr){
     mensCont.innerHTML="";

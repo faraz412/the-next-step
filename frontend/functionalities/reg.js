@@ -6,18 +6,18 @@ const optBtn1=document.querySelector(".default-a");
 optBtn1.addEventListener("click",(e)=>{
     //console.log(e);
     e.target.classList.add("click_effect");
-    e.path[1].children[1].classList.remove("click_effect");
-    e.path[2].children[4].classList.add("form_hide");
-    e.path[2].children[3].classList.remove("form_hide");    
+    e.composedPath()[1].children[1].classList.remove("click_effect");
+    e.composedPath()[2].children[4].classList.add("form_hide");
+    e.composedPath()[2].children[3].classList.remove("form_hide");    
 })
 
 const optBtn2=document.querySelector(".default-b");
 optBtn2.addEventListener("click",(e)=>{
     //console.log(e);
     e.target.classList.add("click_effect");
-    e.path[1].children[0].classList.remove("click_effect");
-    e.path[2].children[3].classList.add("form_hide");
-    e.path[2].children[4].classList.remove("form_hide");    
+    e.composedPath()[1].children[0].classList.remove("click_effect");
+    e.composedPath()[2].children[3].classList.add("form_hide");
+    e.composedPath()[2].children[4].classList.remove("form_hide");    
 })
 
 
